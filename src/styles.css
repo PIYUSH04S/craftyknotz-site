@@ -59,6 +59,198 @@ footer{padding:28px 8vw;display:flex;align-items:center;justify-content:space-be
 @media(max-width:560px){
   .announcement{font-size:7px;letter-spacing:.1em}.nav{padding:0 5vw;height:70px}.brand span{font-size:25px}.nav-actions{margin-left:auto}.hero{padding:55px 6vw 35px;min-height:auto}.hero-art{height:350px}.hero-circle.one{width:290px;height:290px}.hero-circle.two{width:360px;height:250px}.floating-note{font-size:7px;padding:9px}.hero-quote{font-size:14px}.collection,.promise{padding:80px 6vw}.product-grid{gap:12px}.product-info h3{font-size:14px}.product-info strong{font-size:11px}.quick{opacity:1;transform:none}.quote-section{min-height:520px}.promise-head h2{font-size:60px}.closing h2{font-size:70px}footer{padding:25px 6vw;flex-direction:column;align-items:flex-start;gap:10px}
 }
+/* =========================
+   QUICK VIEW MODAL
+========================= */
+
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(20, 16, 12, 0.72);
+  backdrop-filter: blur(12px);
+
+  animation: modalFadeIn 0.3s ease forwards;
+}
+
+.modal {
+  position: relative;
+
+  width: min(900px, 94vw);
+  max-height: 90vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  overflow: hidden;
+
+  background: var(--surface, #f7f1e7);
+  border-radius: 24px;
+
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.3);
+
+  animation: modalScaleIn 0.35s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+/* Rakhi image inside Quick View */
+
+.modal > img {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+
+  display: block;
+
+  object-fit: contain;
+
+  padding: 45px;
+
+  background: #eee7db;
+}
+
+/* Right-side information */
+
+.modal-copy {
+  padding: 55px 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #211c17;
+}
+
+.modal-copy small {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+.modal-copy h2 {
+  margin: 12px 0 18px;
+
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.05;
+}
+
+.modal-copy p {
+  line-height: 1.7;
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+
+.modal-copy strong {
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+/* Close button */
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  z-index: 5;
+
+  width: 42px;
+  height: 42px;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.85);
+
+  font-size: 26px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.modal-close:hover {
+  transform: rotate(90deg) scale(1.05);
+  background: white;
+}
+
+/* Animations */
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .modal-bg {
+    padding: 15px;
+    align-items: center;
+  }
+
+  .modal {
+    width: 100%;
+    max-height: 92vh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+  }
+
+  .modal > img {
+    width: 100%;
+    height: 320px;
+    min-height: 0;
+
+    padding: 25px;
+    object-fit: contain;
+  }
+
+  .modal-copy {
+    padding: 30px 25px 35px;
+  }
+
+  .modal-copy h2 {
+    font-size: 30px;
+  }
+
+  .modal-close {
+    top: 12px;
+    right: 12px;
+  }
+}
 
 /* Minimal reference-style cursor */
 @media(pointer:fine){
