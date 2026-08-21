@@ -19,7 +19,7 @@ const products = [
   { id:3, name:"Rajputana Red", price:110, cat:"Traditional", image:r3, tag:"Popular" },
   { id:4, name:"Saffron Shree Rakhi", price:90, cat:"Spiritual", image:r4, tag:"Classic" },
   { id:5, name:"Midnight Blue Rakhi", price:80, cat:"Premium", image:r5, tag:"Limited" },
-  { id:6, name:"Rose Gold Charm", price:80, cat:"Premium", image:r6, tag:"Premium" },
+  { id:6, name:"Rose Gold Charm", price:120, cat:"Premium", image:r6, tag:"Premium" },
   { id:7, name:"Meenakari Peacock", price:110, cat:"Pearl", image:r7, tag:"Handpicked" },
   { id:8, name:"Lotus Love Rakhi", price:90, cat:"Floral", image:r8, tag:"New" },
   { id:9, name:"Minimalist Thread", price:90, cat:"Minimal", image:r9, tag:"Everyday" },
