@@ -132,7 +132,7 @@ function App() {
       <div className="announcement">✦ FREE SHIPPING ON ORDERS ABOVE ₹499 &nbsp; • &nbsp; HANDPICKED WITH LOVE ✦</div>
 
       <header className="nav">
-        <a className="brand" href="#top"><span>riwaaz</span><small>THE RAKHI EDIT</small></a>
+        <a className="brand" href="#top"><span>Crafty Knotz</span><small>Premiun Crochet Collection</small></a>
         <nav>
           <a href="#collection">Collection</a>
           <a href="#story">Our Story</a>
@@ -255,7 +255,7 @@ function App() {
                       <a className="contact-card reveal" href="https://www.instagram.com/crafty_.knot?igsi=MTd3cDBkMXV2MW1mZA==" target="_blank" rel="noreferrer">
               <span className="contact-icon">◎</span>
               <small>INSTAGRAM</small>
-              <h3>@instagram</h3>
+              <h3>crafty_.knot</h3>
               <span className="contact-arrow">↗</span>
             </a>
           </div>
